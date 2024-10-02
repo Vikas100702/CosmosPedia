@@ -1,4 +1,5 @@
 import 'package:cosmospedia/CustomAppBar.dart';
+import 'package:cosmospedia/CustomNavigationBar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,17 +14,26 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-        image: AssetImage("assets/background.png",),
-      )),
-      child: Column(
-        children: [
-          CustomAppBar(
-            title: "CosmosPedia",
-            titleColor: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
+            "assets/background.png",
+          ),
+        ),
+      ),
+      child: Stack(
+        children: <Widget>[
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: CustomAppBar(),
+            floatingActionButton: FloatingActionButton(
+              // isExtended: true,
+              shape: CircleBorder(),
+              onPressed: (){},
+              child: Icon(Icons.home,),
+            ),
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            bottomNavigationBar: CustomNavigationBar(),
           )
         ],
       ),
