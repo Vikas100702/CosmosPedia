@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  final Color titleColor;
-  final FontWeight fontWeight;
-  final double fontSize;
 
   const CustomAppBar({
     super.key,
-    required this.title,
-    required this.titleColor,
-    required this.fontWeight,
-    required this.fontSize,
   });
 
   @override
@@ -21,14 +13,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         elevation: 10,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white.withAlpha(0),
+        // foregroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         title: Text(
-          title,
+          "CosmosPedia",
           style: TextStyle(
-            color: titleColor,
-            fontWeight: fontWeight,
-            fontSize: fontSize,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
         ),
         actions: [
