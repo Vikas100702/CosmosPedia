@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavigationBar extends StatefulWidget{
@@ -12,6 +13,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      color: Colors.black38,
 
       height: 60,
       shape: CircularNotchedRectangle(),
@@ -19,10 +21,10 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.event)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.rocket)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.note_alt)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.image)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.event) , color: CupertinoColors.white,),
+          IconButton(onPressed: (){}, icon: Icon(Icons.cloud) ,color: CupertinoColors.white,),
+          IconButton(onPressed: (){}, icon: Icon(Icons.note_alt),color: CupertinoColors.white),
+          IconButton(onPressed: (){}, icon: Icon(Icons.image),color: CupertinoColors.white),
 
         ],
       ),
