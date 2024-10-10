@@ -1,7 +1,6 @@
 import 'dart:async';
+import 'package:cosmospedia/src/presentation/home_screen/HomeScreen.dart';
 import 'package:flutter/material.dart';
-
-import 'HomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

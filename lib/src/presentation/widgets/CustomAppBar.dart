@@ -4,13 +4,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
-  @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 10,
+      excludeHeaderSemantics: true,
+      elevation: 0,
       backgroundColor: Colors.white.withAlpha(0),
+      foregroundColor: Colors.white.withAlpha(0),
+      forceMaterialTransparency: true,
       automaticallyImplyLeading: false,
       title: Text(
         "CosmosPedia",
@@ -45,4 +45,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
